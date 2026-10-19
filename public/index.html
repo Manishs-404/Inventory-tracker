@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockFlow - Sign in</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <h1>StockFlow</h1>
+      <p class="sub">Suppliers publish stock. Users reorder before it runs out.</p>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="login" type="button">Sign in</button>
+        <button class="tab" data-tab="register" type="button">Create account</button>
+      </div>
+
+      <form id="login-form">
+        <input id="login-email" type="email" placeholder="Email" autocomplete="email" required />
+        <input id="login-password" type="password" placeholder="Password" autocomplete="current-password" required />
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+
+      <form id="register-form" class="hidden">
+        <div class="role-choice">
+          <label>
+            <input type="radio" name="role" value="supplier" />
+            <strong>Supplier</strong>
+            I supply stock
+          </label>
+          <label>
+            <input type="radio" name="role" value="user" checked />
+            <strong>User</strong>
+            I order stock
+          </label>
+        </div>
+        <input id="reg-name" type="text" placeholder="Name or business name" maxlength="80" required />
+        <input id="reg-email" type="email" placeholder="Email" autocomplete="email" required />
+        <input id="reg-password" type="password" placeholder="Password (6+ characters)" minlength="6" autocomplete="new-password" required />
+        <button class="btn" type="submit">Create account</button>
+      </form>
+
+      <p id="auth-error" class="error hidden"></p>
+      <p class="demo-hint">After <code>npm run seed</code>: supplier@demo.com or user@demo.com, password demo1234</p>
+    </div>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>

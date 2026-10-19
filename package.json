@@ -1,0 +1,19 @@
+{
+  "name": "stockflow-inventory",
+  "version": "1.0.0",
+  "description": "Mini inventory management system: suppliers publish stock, users reorder when stock runs low",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node seed.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0"
+  }
+}

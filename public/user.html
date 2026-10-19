@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockFlow - My inventory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">StockFlow</div>
+    <div class="who">
+      <span class="name" id="who"></span>
+      <span class="role-pill">User</span>
+      <button class="btn ghost small" id="logout" type="button">Log out</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div id="alert" class="alert hidden"></div>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>My inventory</h2>
+          <p class="hint">An item is "low" when stock is at or below its reorder point. <strong>Save</strong> stores your edits to stock, reorder point and order quantity.</p>
+        </div>
+        <button class="btn ghost small" id="refresh" type="button">Refresh</button>
+      </div>
+
+      <form id="add-form" class="inline-form">
+        <label class="field grow">Add a product from a supplier
+          <select id="a-product" required></select>
+        </label>
+        <label class="field">Current stock
+          <input id="a-qty" type="number" min="0" step="1" value="0" style="width:100px" required />
+        </label>
+        <label class="field">Reorder at
+          <input id="a-level" type="number" min="0" step="1" value="10" style="width:100px" required />
+        </label>
+        <label class="field">Order qty
+          <input id="a-reorder" type="number" min="1" step="1" value="20" style="width:100px" required />
+        </label>
+        <button class="btn" type="submit">Add to inventory</button>
+      </form>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th><th>In stock</th><th>Reorder at</th><th>Status</th><th>Order qty</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="inventory-body"></tbody>
+        </table>
+      </div>
+      <p id="inventory-empty" class="empty hidden">Nothing tracked yet. Add a product above to start monitoring its stock.</p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h2>My orders</h2></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Placed</th><th>Product</th><th>Supplier</th>
+              <th class="num-right">Qty</th><th class="num-right">Total</th><th>Status</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="orders-body"></tbody>
+        </table>
+      </div>
+      <p id="orders-empty" class="empty hidden">No orders yet.</p>
+    </section>
+  </main>
+
+  <script src="common.js"></script>
+  <script src="user.js"></script>
+</body>
+</html>
