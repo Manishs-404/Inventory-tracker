@@ -182,8 +182,4 @@ All routes except register/login need the header `Authorization: Bearer <token>`
 
 ## Author
 
-Manish, final-year Computer Science and Engineering, New Horizon College of Engineering, Bengaluru.
-
-## License
-
-MIT
+Manish
