@@ -151,32 +151,7 @@ Open the two accounts in separate browser windows (one normal, one private) to p
 2. As the **supplier**, click **Refresh**, then **Deliver** on the orders.
 3. As the **user**, click **Refresh** and see the stock go up and the warning disappear.
 
-## Output
 
-**Login and registration**
-
-![Login](screenshots/01-login.png)
-![Register](screenshots/02-register.png)
-
-**User dashboard: low-stock warning**
-
-![User dashboard with low stock](screenshots/03-user-low-stock.png)
-
-**User places orders for the low items**
-
-![Orders placed](screenshots/04-user-orders-placed.png)
-
-**Supplier dashboard: incoming orders**
-
-![Supplier pending orders](screenshots/05-supplier-pending-orders.png)
-
-**After delivery: supplier stock reduced, orders marked delivered**
-
-![Supplier after delivery](screenshots/06-supplier-after-delivery.png)
-
-**User dashboard after delivery: stock increased, warning cleared**
-
-![User after delivery](screenshots/07-user-after-delivery.png)
 
 ## API Reference
 
